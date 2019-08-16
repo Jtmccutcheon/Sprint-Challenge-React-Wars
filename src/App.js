@@ -28,7 +28,11 @@ const App = () => {
         {data.map(props => {
           return <StarWarsPeeps limit={10}
             name={props.name}
+            gender={props.gender}
             haircolor={props.hair_color}
+            eyecolor={props.eye_color}
+            height={props.height}
+            mass={props.mass}
           />
         })}
       </div>
@@ -37,3 +41,5 @@ const App = () => {
 }
 
 export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
